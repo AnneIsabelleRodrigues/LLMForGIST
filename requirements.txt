@@ -1,0 +1,12 @@
+transformers
+datasets
+torch
+bitsandbytes
+peft
+accelerate
+langchain
+faiss-cpu
+sentence-transformers
+python-dotenv
+qdrant_client
+hf_xet

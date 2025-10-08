@@ -1,0 +1,119 @@
+# Summary
+
+- GISTs account for **80% of all mesenchymal tumors in the GI tract** but only **0.1–3% of all gastrointestinal malignancies**.  
+- Approximately **30% of GISTs are malignant**, meaning most are benign.  
+- **Median age at diagnosis is in the 60s**; they may occur at any age, though pediatric cases are rare and often linked to hereditary syndromes.  
+- **Annual incidence** in European countries and USA ranges from **6.5 to 14.5 cases**, with an **age-adjusted rate of 0.68–0.8 per 100,000** population.  
+- Sex distribution is approximately **equal between males and females**.  
+- **Tumor locations**:  
+  - **60% in the stomach**  
+  - **20–30% in the small intestine**  
+  - Rarely found in the omentum, mesentery, or retroperitoneum  
+- **Histological subtypes**:  
+  - **70% spindle cell**  
+  - **20% epithelioid cell**  
+  - **10% mixed**  
+- **Immunohistochemistry findings**:  
+  - About **95% are KIT-positive**  
+    - Four known KIT mutations: 
+        - **Exon 11** are the most common
+        - **Exon 9** and **Exon 17** mutations are clinically important due to their reduced sensitivity and resistance, respectively, to tyrosine kinase inhibitors
+  - The remaining ~5% express **DOG-1** and/or **CD34**  
+- **Genetic mutations**:  
+  - ~85% harbor **KIT or PDGFRA gain?of?function mutations**  
+  - The rest are “wild-type” and may involve **NF1, BRAF, HRAS**, or be associated with **syndromes like NF1 or Carney triad**
+
+
+
+# What are GISTs?
+
+A Gastrointestinal Stromal Tumor (GIST) is the most common type of **sarcoma**, rare cancers that develop in the connective tissues: muscle, bone, nerves, cartilage, tendons, blood vessels and the fatty and fibrous tissues [1]. Although GISTs are considered rare tumors, most GISTs are discovered incidentally so the true prevalence is unknown [2].
+
+GISTs develop in the gastrointestinal (GI) tract, a long tube running through the body from the esophagus (gullet) to the anus (back passage) and includes the stomach and intestines. Indeed, they are rare, accouting for **0.1% to 3%** of all GI malignancies, being **the most common mesenchymal tumors of the GI tract** [3]. Approximately 30% of GISTs are malignant [3], and they typically affect adults around age 65, with equal sex distribution, and the most common locations are the **stomach** (~56%) and the **small intestine** (~32%) [2]. GISTs may rarely occur extra gastrointestinally, where they most commonly occur in the *omentum*, *mesentery*, or *retroperitoneum* [3]. 
+
+
+# Molecular Background and Types
+
+GISTs originate from the same lineage as interstitial cells of Cajal, though it's unclear if they arise directly from these cells or their precursors. About **85% of sporadic GISTs** have mutually exclusive mutations in the **KIT (CD117)** or **PDGFRA** genes, making them responsive to targeted therapies [1,3]. Rarer subtypes of GIST include: 
+1. **Wild?type**, GISTs with no KIT/PDGFRA mutation; 
+2. **Pediatric**; 
+3. **Syndromic**, which are linked to Carney’s Triad Syndrome, Carney Stratakis Syndrome and Neurofibromatosis; and
+4. **Familial**, an extremely rare inherited form of GIST. 
+
+
+# Symptoms and Diagnosis
+
+GISTs present **asymptomatically in 18% of cases**, especially in cases of smaller tumors of the intestinal tract. These tumors are usually found incidentally on abdominal computerized tomography (CT) scans, during endoscopy, or during surgical procedures for other manifestations. Symptomatic patients may present with nonspecific symptoms of nausea, vomiting, abdominal distension, early satiety, abdominal pain, and rarely as a palpable abdominal mass [2].
+
+The diagnosis involves a multi-modal approach combining imaging, endoscopy, histopathology, and molecular testing. The main approaches are:
+- **Computerized Tomography (CT):** it takes a number of x-rays to make a 3D image of an affected area;
+- **Ultrasound scan:** it uses sound waves to create images of the organs inside the body;
+- **Endoscopy:** a thin, flexible tube with a light and camera, is inserted through the mouth to examine the stomach and small bowel for abnormalities, and it can also be used to collect biopsies for laboratory testing;
+- **EUS:** it uses an endoscope with an ultrasound scanner attached to investigate tumours like GIST below the lining of the stomach or upper small bowel;
+- **Positron Emission Tomography (PET):** it uses a small amount of radioactive glucose to highlight areas in the body where glucose is used for energy, helping to detect cancer, as cancer cells process glucose differently from normal tissues;
+- **Magnetic Resonance Imaging (MRI):** uses magnets to create an image of the tissues of the body;
+- **Histopathology:** examination of a tissue sample by a pathologist under a microscope to identify disease.
+
+
+
+# Risk Categorization
+
+The risk category of a GIST is determined based on the results of the scans an tests. There are some factors that influence on such a categorization [1], specifically:
+- **Size:** large tumors are more likely to behave aggressively than smaller tumors; 
+- **Mitotic count:** it is the number of actively dividing cells seen under a microscope within a certain area of the tumor. This tells the rate at which the cancer cells are multiplying, showing how aggressive the tumor is. 
+- **Location:** tumors in the small bowel and back passage are more aggressive than those in the stomach; 
+- **Tumor rupture:** sometimes the surface of the tumor can be damaged during the operation to remove it. In other cases the tumor may not be intact at the time of the surgery. In these cases there is a chance that tumor cells may have escaped into the abdomen, which can put you at a higher risk of a GIST coming back.
+
+Many classification systems have evolved over the years but none have proved to be superior to the other. One of the most used is the National Institutes of Health (NIH) classification, the first GIST classification system to be proposed. For example, according to this classification, a GIST is considered high risk if the tumor is >10 cm with any mitotic index, the tumor is >5 cm with a mitotic count >5/50 HPF, or if the tumor has ruptured [2].
+
+| Risk Level        | Tumor Size (cm) | Mitotic Count (per 50 HPF) |
+| ----------------- | --------------- | -------------------------- |
+| Very Low Risk     | <2              | <5                         |
+| Low Risk          | 2.1–5           | <5                         |
+| Intermediate Risk | <5              | 6–10                       |
+| Intermediate Risk | 5–10            | <5                         |
+| High Risk         | >5              | >5                         |
+| High Risk         | >10             | Any mitotic count          |
+
+
+# Treatments
+
+Traditional chemotherapy and radiation are not effective on GISTs, therefore **surgical resection** has always been the gold standard of treatment [2]. If the tumor is too large to be removed safely, or the GIST has already spread to other parts of the body, it can be treated using targeted drugs.
+
+- **Imatinib** is the first treatment choice for GIST patients. It is effective in 80% of patients and on average will control the disease for about two years [1]. It is a first-line tyrosine kinase inhibitor (TKI) that blocks ATP binding on **CD117 (KIT)** and **PDGFRA**, thereby inhibiting signal transduction in GIST cells. It is particularly effective in tumors positive for these markers [2].
+- **Sunitinib** is a second-line TKI used in patients who develop resistance or intolerance to imatinib. It inhibits multiple receptors including KIT, PDGFR, and VEGFR. It is particularly useful for tumors with **KIT exon 9 mutations** or other secondary resistance mutations [3].
+- **Ponatinib** is a multi-targeted TKI that is not yet FDA-approved for GIST but is used off-label, especially in cases with **KIT exon 17** or **PDGFRA D842V** mutations, which confer resistance to both imatinib and sunitinib [2].
+
+Summary of recommended adjuvant therapy:
+
+| CD117/C-KIT Mutation | Imatinib                           | Sunitinib        | Ponatinib        |
+| -------------------- | ---------------------------------- | ---------------- | ---------------- |
+| Exon 9               | –                                  | Standard dosing‡ | –                |
+| Exon 11              | Early: low dose†; late: high dose† | –                | –                |
+| Exon 13              | –                                  | Standard dosing‡ | –                |
+| Exon 14              | –                                  | Standard dosing‡ | –                |
+| Exon 17              | –                                  | –                | Standard dosing‡ |
+| No exon mutation     | –                                  | Standard dosing‡ | –                |
+**†** High dose = 800 mg/day; Low dose = 400 mg/day  
+**‡** Standard dosing according to established protocol
+
+## Metastasis
+
+GISTs can spread to other parts of the body. This is called metastasis or secondary cancer. Secondary cancers in GIST patients can appear anywhere but are more common in the abdomen and liver [1]. In addition, metastatic GISTs are developing resistance to imatinib and sunitinib. **Regorafenib**, a kinase inhibitor administered at a standard dose of 160 mg daily, has been shown to reduce tumor size and metastasis in patients with drug-resistant, metastatic, or unresectable GISTs. It is now approved by the FDA as a standard treatment option for GISTs that no longer respond to other therapies [2].
+
+## Newer Therapies
+
+As resistance to standard TKIs grows in GIST treatment, newer therapies are emerging to improve outcomes for advanced and refractory cases. These options expand treatment possibilities beyond traditional approaches [2]:
+- **Ponatinib:** A tyrosine kinase inhibitor effective against resistant GISTs, especially those with exon 11 mutations unresponsive to other TKIs, showing median survival around seven months but requiring further safety evaluation due to adverse effects.
+- **Immunotherapy:** Combination of nivolumab (PD-1 inhibitor) and ipilimumab (CTLA-4 blocker) has shown modest progression-free survival benefits and tumor shrinkage (~40%) in advanced or TKI-resistant GIST patients.
+- **Endoscopic Ablation:** Endoscopic ultrasound–guided ethanol injection offers a minimally invasive option for ablating GIST or metastatic lesions in patients unfit for surgery, with promising early results but needing more research on safety and efficacy.
+
+
+# References
+
+<a id="1">[1]</a> Peninsula Cancer Alliance. (2024).  
+_Understanding GIST: Gastrointestinal stromal tumours (2024 edition)_ [https://peninsulacanceralliance.nhs.uk/wp-content/uploads/2024/01/Understanding-GIST-2024.pdf](https://peninsulacanceralliance.nhs.uk/wp-content/uploads/2024/01/Understanding-GIST-2024.pdf)
+
+<a id="2">[2]</a> Parab, T. M., DeRogatis, M. J., Boaz, A. M., Grasso, S. A., Issack, P. S., Duarte, D. A., Urayeneza, O., Vahdat, S., Qiao, J.-H., & Hinika, G. S. (2019). Gastrointestinal stromal tumors: a comprehensive review. _Journal of Gastrointestinal Oncology_, _10_(1), 95–102. [https://jgo.amegroups.org/article/view/23883/19709](https://jgo.amegroups.org/article/view/23883/19709)
+
+<a id="3">[3]</a> Burch, J., Ahmad, I. (2022). Gastrointestinal Stromal Tumor.  In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing. [https://www.ncbi.nlm.nih.gov/books/NBK554541/](https://www.ncbi.nlm.nih.gov/books/NBK554541/)

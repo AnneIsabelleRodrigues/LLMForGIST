@@ -1,0 +1,12 @@
+import os
+from dotenv import load_dotenv
+
+os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
+
+load_dotenv()
+
+QDRANT_API_KEY = os.getenv("QDRANT_KEY")
+QDRANT_CLUSTER_URL = os.getenv("QDRANT_URL")
+COLLECTION_NAME = os.getenv("COLLECTION_NAME")
+VECTOR_DIMENSION = os.getenv("VECTOR_DIMENSION")
+HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN_ANNE")
