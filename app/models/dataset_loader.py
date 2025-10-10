@@ -1,26 +1,27 @@
 import os
-from datasets import load_dataset
+from datasets import load_dataset, DatasetDict
+from typing import Dict
 
 def load_local_dataset(data_dir="data/dataset"):
 
-    files = {
-        "seed_train": None,
-        "seed_val": None,
-        "seed_test": None
-    }
+    dataset_paths: Dict[str, str] = {}
 
-    for split in files.keys():
-        path = os.path.join(data_dir, f"{split}.csv")
+    for split_name in ["train", "validation", "test"]:
+        path = os.path.join(data_dir, f"{split_name}.jsonl")
+        if not os.path.exists(path):
+            path = os.path.join(data_dir, f"val.jsonl")
+            if split_name == "validation" and os.path.exists(path):
+                dataset_paths[split_name] = path
+                continue
+            path = os.path.join(data_dir, f"{split_name}.jsonl")
+
         if os.path.exists(path):
-            files[split] = path
-            break
+            dataset_paths[split_name] = path
 
-    if files["train"] is None:
-        raise FileNotFoundError("⚠️ Arquivo de treino não encontrado")
+    loaded_datasets: DatasetDict = load_dataset('json', data_files=dataset_paths)
 
-    dataset = load_dataset('csv', data_files={k: v for k, v in files.items() if v is not None})
-
-    for split, ds in dataset.items():
+    print("Datasets carregados:")
+    for split, ds in loaded_datasets.items():
         print(f"  - {split}: {len(ds)} amostras")
 
-    return dataset
+    return loaded_datasets
