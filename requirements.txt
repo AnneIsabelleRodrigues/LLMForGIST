@@ -10,3 +10,7 @@ sentence-transformers
 python-dotenv
 qdrant_client
 hf_xet
+mistralai
+pypdf
+langchain-text-splitters
+trl
