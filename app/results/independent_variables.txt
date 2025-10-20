@@ -1,0 +1,202 @@
+Resposta:
+ To identify the **independent variables** in a causal graph — that is, variables that are **not causally influenced by any other variables** in the system — we need to think step by step based on the **causal structure** of the data and the **context of GIST (Gastrointestinal Stromal Tumor)**.
+
+We are given a list of variables, and our goal is to determine which of them are **independent** (i.e., **not caused by any other variable** in the system). This means they are **exogenous** — their values are not determined by the others, even if they are correlated.
+
+---
+
+### Step 1: Understand what "independent" means in a causal graph
+
+In a causal graph:
+- **Independent variables (exogenous variables)** are not influenced by any other variables.
+- They are the **starting points** of the causal chain.
+- They may influence other variables (e.g., tumor grade affects survival), but they are not caused by any other variable.
+
+We are not looking for variables that are statistically independent (i.e., uncorrelated), but rather **causally independent** — not influenced by any other variable.
+
+---
+
+### Step 2: Identify variables that are **not influenced by others**
+
+Let’s go through the variables and assess whether they could be **caused by** any other variable in the dataset.
+
+#### 1. `age_at_diagnosis`
+- Likely influenced by patient demographics and biological factors.
+- But age is a **baseline characteristic** — it's not caused by the tumor or treatment.
+- However, **age may be correlated with survival**, but not caused by it.
+- ✅ **Likely independent** (exogenous)
+
+#### 2. `gender`
+- A biological attribute — fixed at diagnosis.
+- Not caused by tumor, treatment, or other clinical features.
+- ✅ **Independent**
+
+#### 3. `race` / `ethnicity`
+- Socio-demographic variables.
+- Not caused by tumor biology or treatment.
+- May influence access to care, but not caused by any other variable.
+- ✅ **Independent**
+
+#### 4. `stage_at_diagnosis`, `derived_eod_stage_group`, `tumor_size`, `tumor_grade`
+- These are **clinical outcomes** of the tumor.
+- `tumor_grade` is a histopathological feature — determined by pathology, not caused by treatment.
+- `stage_at_diagnosis` is derived from tumor size, location, and spread — **so it is caused by tumor_size, metastatic_site, etc.**
+- `tumor_size` and `tumor_grade` are **not caused by treatment or diagnosis** — but they are **influenced by tumor biology**.
+- However, **tumor_size** may be influenced by time (e.g., `tumor_size_over_time`), but at diagnosis, it's a baseline.
+- But note: `tumor_size` is a **cause** of stage and survival — not caused by other variables.
+- So: `tumor_size`, `tumor_grade` → **independent** (they are observed at diagnosis)
+- ❌ But `stage_at_diagnosis` is **caused by** tumor_size, primary_site, metastatic_site → **not independent**
+- ❌ `derived_eod_stage_group` is derived from EOD parameters → **not independent**
+
+#### 5. `primary_site`
+- Where the tumor originated (e.g., stomach, small intestine).
+- This is a **biological origin**, not caused by treatment or other variables.
+- It may influence tumor behavior, but not caused by anything else.
+- ✅ **Independent**
+
+#### 6. `metastatic_site`
+- Where cancer spread.
+- This is a **result** of tumor progression — not caused by diagnosis or treatment directly.
+- But it **can be caused by tumor biology** (e.g., tumor grade, stage).
+- So: **not independent** — it's a downstream outcome of tumor spread.
+- ❌ **Dependent**
+
+#### 7. `os_months`, `os_status`, `vital_status`, `cause_specific_death`, `other_cause_of_death`
+- These are **outcomes** of the disease course.
+- Survival is **caused by** tumor grade, size, stage, treatment, etc.
+- ❌ All are **dependent variables** — they are consequences.
+
+#### 8. `surgery_of_primary_site`, `scope_regional_lymph_surgery`, `surgery_of_other_site`
+- These are **treatment decisions**.
+- These are **influenced by** diagnosis, stage, patient condition, access to care, etc.
+- They may **affect survival**, but are **not independent** — they are **caused by** clinical judgment based on diagnosis.
+- ❌ Not independent
+
+#### 9. `radiation_sequence_with_surgery`, `radiation_type`, `systemic_sequence_with_surgery`
+- These are **treatment sequences**.
+- These are **determined by clinical decisions** based on diagnosis, stage, and patient factors.
+- So they are **not independent**.
+- ❌ Not independent
+
+#### 10. `diagnosis_to_treatment_days`
+- Time between diagnosis and treatment.
+- This is **caused by** healthcare access, patient decisions, system delays — not caused by tumor biology.
+- But it's **influenced by** other variables (e.g., year_of_diagnosis, region, access to care).
+- So it's **not a true exogenous variable** — it's a proxy for care system factors.
+- ❌ Not independent
+
+#### 11. `year_of_diagnosis`
+- This is a **time variable**.
+- It may influence treatment patterns (e.g., new therapies in later years).
+- But it is **not caused by any other variable** — it's a baseline.
+- ✅ **Independent** (exogenous)
+
+#### 12. `derived_eod_t`, `derived_eod_n`
+- These are derived from tumor size and lymph node involvement.
+- So they are **caused by** `tumor_size`, `metastatic_site`, etc.
+- ❌ Not independent
+
+#### 13. `tumor_size_over_time`
+- This is a **dynamic progression** — clearly **dependent** on tumor biology and treatment.
+- ❌ Not independent
+
+#### 14. `survival_months_flag`
+- A flag indicating reliability of survival data.
+- This is a **data quality variable**, not a biological outcome.
+- It may be influenced by missingness or data entry — not a causal variable.
+- But it's not a cause or effect of disease — more of a **measurement artifact**.
+- ✅ Possibly independent (as it's a data flag)
+
+But: Is it **causally independent**? Probably yes — it's not caused by any other variable in the system.
+
+---
+
+### Step 3: Final list of variables that are **not caused by any other variable**
+
+We now compile only those variables that are **not influenced** by any other variable in the system.
+
+These are **exogenous** variables.
+
+✅ **Independent variables (exogenous)**:
+
+1. `age_at_diagnosis`
+2. `gender`
+3. `race`
+4. `ethnicity`
+5. `primary_site`
+6. `year_of_diagnosis`
+7. `survival_months_flag`
+
+> Why not `tumor_grade` or `tumor_size`?
+> Because tumor grade and size are **biological features** of the tumor that are **not caused** by treatment or diagnosis — they are **inherent**.
+> However, in the context of a **causal graph**, tumor grade and size are **measured at diagnosis** and **not caused by other variables** — they are **independent**.
+
+But wait: in some models, tumor grade is **influenced by** the tumor's biology, which is not directly observed. But in the data, they are **observed at diagnosis**, and not derived from other variables.
+
+So are they independent?
+
+Yes — **tumor_grade** and **tumor_size** are **not caused by any other variable in the dataset**.
+
+Let’s re-evaluate:
+
+- `tumor_size`: Is it caused by anything? Only by tumor growth — not by diagnosis or treatment. At diagnosis, it's a baseline.
+- `tumor_grade`: Determined by pathology — not caused by other variables.
+- So both are **exogenous**.
+
+Similarly, `primary_site` is exogenous.
+
+But note: `stage_at_diagnosis` is **not** independent — it is derived from tumor_size, primary_site, metastasis.
+
+So:
+
+✅ Final list of **independent (exogenous)** variables:
+
+- `age_at_diagnosis`
+- `gender`
+- `race`
+- `ethnicity`
+- `primary_site`
+- `tumor_size`
+- `tumor_grade`
+- `year_of_diagnosis`
+- `survival_months_flag`
+
+Wait — is `tumor_size` **influenced** by treatment? Not at diagnosis. At diagnosis, it's a snapshot.
+
+So yes — it is a **baseline characteristic**.
+
+Similarly, `tumor_grade` is a histological feature — not caused by treatment or diagnosis.
+
+Thus, they are **independent**.
+
+---
+
+### Final Check: Are any of these caused by others?
+
+- `age_at_diagnosis` → no
+- `gender` → no
+- `race`, `ethnicity` → no
+- `primary_site` → no
+- `tumor_size` → not caused by treatment, diagnosis, or stage — it's a direct measurement
+- `tumor_grade` → not caused by anything else — determined by pathology
+- `year_of_diagnosis` → not caused by anything
+- `survival_months_flag` → data flag — not caused by any other variable
+
+All are **exogenous**.
+
+---
+
+### ✅ Final Answer (variables that are independent):
+
+```
+age_at_diagnosis, gender, race, ethnicity, primary_site, tumor_size, tumor_grade, year_of_diagnosis, survival_months_flag
+```
+
+> Note: We excluded `stage_at_diagnosis`, `metastatic_site`, `os_months`, etc., because they are **caused by** tumor characteristics or treatment.
+
+---
+
+### ✅ Final Answer:
+```
+age_at_diagnosis, gender, race, ethnicity, primary_site, tumor_size, tumor_grade, year_of_diagnosis, survival_months_flag
+```
