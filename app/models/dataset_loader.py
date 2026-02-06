@@ -1,6 +1,7 @@
 import os
 from datasets import load_dataset, DatasetDict
 from typing import Dict
+from pypdf import PdfReader
 
 def load_local_dataset(data_dir="data/dataset"):
 
